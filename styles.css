@@ -1,0 +1,132 @@
+body {
+    background-color: aliceblue;
+}
+
+.inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+header .logo-humburger .hamburger {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    header .inner {
+      flex-direction: column;
+    }
+
+    header .logo-humburger {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    header .logo-humburger .hamburger {
+      display: block;
+      margin-right: 30px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    header .menu {
+      width: 100%;
+      text-align: right;
+      display: none;
+    }
+
+    header .menu.open {
+      display: block;
+    }
+  }
+
+  .logo svg path {
+    fill: white;
+  }
+  
+  /* Mengatur tampilan header */
+  header {
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+  }
+  
+  /* Styling logo */
+  header .logo img {
+    height: 40px; /* Sesuaikan ukuran logo */
+    width: auto;
+  }
+  
+  /* Menu navigation styling */
+  header .menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Spasi antara menu */
+  }
+
+  @media (max-width: 768px) {
+    header .menu ul {
+      flex-direction: column;
+    }
+  }
+  
+  header .menu ul li {
+    display: inline-block;
+  }
+  
+  header .menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 15px 30px;
+    transition: background-color 0.3s ease;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    header .menu ul li a  {
+      font-size: 16px;
+      padding: 8px 20px;
+    }
+  }
+
+  header .menu ul li a[ui-sref="quote"] {
+    background-color: #645f59;
+    border-radius: 10px;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    margin-bottom: 3px;
+  }
+  
+  /* Efek hover pada menu */
+  header .menu ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+
+  .list-group {
+    list-style: none;
+  }
+
+  .list-group-item {
+    margin-bottom: 10px;
+  }
